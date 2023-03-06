@@ -1,7 +1,7 @@
 # GamePing
 
-## 脚本介绍
-用于检测VPS到各游戏服务器之间的延迟.
+## Intro
+Detect the delay between the VPS and game server
 
 Game list:
 
