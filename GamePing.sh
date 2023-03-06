@@ -36,12 +36,12 @@ function check_dependencies(){
 	
 	bc --help > /dev/null 2>&1
 		if [[ "$?" -ne "0" ]];then
-			echo -e "${Font_Green}正在安装bc...${Font_Suffix}" 
+			echo -e "${Font_Green}installing bc...${Font_Suffix}" 
 			$InstallMethod bc -y > /dev/null 2>&1
 		fi
 	fping -h > /dev/null 2>&1
 		if [[ "$?" -ne "0" ]];then
-			echo -e "${Font_Green}正在安装fping...${Font_Suffix}" 
+			echo -e "${Font_Green}installing fping...${Font_Suffix}" 
 			$InstallMethod fping -y > /dev/null 2>&1
 		fi	
 }		
@@ -319,7 +319,7 @@ function Hypixel_Ping(){
 
 function Call_GameList(){
 clear
-GameList=$(curl https://raw.githubusercontent.com/lmc999/GamePing/main/GameList.txt -s)
+GameList=$(curl https://raw.githubusercontent.com/d9999pro/GamePing/main/GameList.txt -s)
 echo -n -e "${Font_Red}【Suport Game List】${Font_Suffix}\n"
 echo ""
 echo -n -e "${Font_SkyBlue}$GameList${Font_Suffix}\n"
@@ -338,35 +338,35 @@ Hypixel_Ping ${1}
 
 
 function Goodbye(){
-echo -e "${Font_Green}本次测试已结束，感谢使用此脚本 ${Font_Suffix}"
-echo -e "${Font_Red}测试使用ICMP Ping，结果仅供参考 ${Font_Suffix}"
+echo -e "${Font_Green}that is ${Font_Suffix}"
+echo -e "${Font_Red}Result in ICMP Ping${Font_Suffix}"
 }
 
 clear;
 
 function ScriptTitle(){
-echo -e "联机游戏区域延迟测试";
+echo -e "Online Game Region Latency Test";
 echo ""
-echo -e "${Font_Green}项目地址${Font_Suffix} ${Font_Yellow}https://github.com/lmc999/GamePing ${Font_Suffix}";
-echo -e "${Font_Green}BUG反馈或使用交流可加TG群组${Font_Suffix} ${Font_Yellow}https://t.me/gameaccelerate ${Font_Suffix}";
+echo -e "${Font_Green}_${Font_Suffix} ${Font_Yellow}_ ${Font_Suffix}";
+echo -e "${Font_Green}_${Font_Suffix} ${Font_Yellow}_${Font_Suffix}";
 echo ""
-echo -e " ** 测试时间: $(date)";
+echo -e " ** Time: $(date)";
 echo ""
-echo -e " ${Font_SkyBlue}** 您的网络为: ${local_isp}${Font_Suffix} "
+echo -e " ${Font_SkyBlue}** IP: ${local_isp}${Font_Suffix} "
 echo ""
 
 }
 ScriptTitle
 
 function Start(){
-echo -e "${Font_Red}请选择需要检测的区域，直接按回车进行全区域检测${Font_Suffix}"
-echo -e "${Font_SkyBlue}输入数字【1】：【亚服延迟检测】检测${Font_Suffix}"
-echo -e "${Font_SkyBlue}输入数字【2】：【美服延迟检测】检测${Font_Suffix}"
-echo -e "${Font_SkyBlue}输入数字【3】：【欧服延迟检测】检测${Font_Suffix}"
-echo -e "${Font_SkyBlue}输入数字【4】：【澳服延迟检测】检测${Font_Suffix}"
-echo -e "${Font_SkyBlue}输入数字【5】：【南美延迟检测】检测${Font_Suffix}"
-echo -e "${Font_SkyBlue}输入数字【0】：【查看支持游戏列表】${Font_Suffix}"
-read -p "请输入正确数字或直接按回车:" num
+echo -e "${Font_Red}Please select the area to be detected, and press Enter directly to detect the entire area${Font_Suffix}"
+echo -e "${Font_SkyBlue}Number【1】：Asia server delay ping test${Font_Suffix}"
+echo -e "${Font_SkyBlue}Number【2】：US server delay ping test${Font_Suffix}"
+echo -e "${Font_SkyBlue}Number【3】：EU server delay ping test${Font_Suffix}"
+echo -e "${Font_SkyBlue}Number【4】：AUS server delay ping test${Font_Suffix}"
+echo -e "${Font_SkyBlue}Number【5】：SA server delay ping test${Font_Suffix}"
+echo -e "${Font_SkyBlue}Number【0】：View supported game list${Font_Suffix}"
+read -p "Number then press Enter" num
 }
 Start
 
@@ -406,7 +406,7 @@ function RunScript(){
 			Call_GameList
 			
 		else
-			echo -e "${Font_Red}请重新执行脚本并输入正确号码${Font_Suffix}"
+			echo -e "${Font_Red}Please run again and put the correct number${Font_Suffix}"
 			return
 		fi	
 	else
