@@ -352,7 +352,6 @@ echo -e "${Font_Green}_${Font_Suffix} ${Font_Yellow}_${Font_Suffix}";
 echo ""
 echo -e " ** Time: $(date)";
 echo ""
-echo -e " ${Font_SkyBlue}** IP: ${local_isp}${Font_Suffix} "
 echo ""
 
 }
