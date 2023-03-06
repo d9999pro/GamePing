@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -s https://raw.githubusercontent.com/lmc999/GamePing/main/GameIP.csv > /tmp/GameIP.csv
+curl -s https://raw.githubusercontent.com/d9999pro/GamePing/main/GameIP.csv > /tmp/GameIP.csv
 ip_file='/tmp/GameIP.csv'
 
 Font_Black="\033[30m";
