@@ -20,7 +20,7 @@ Game list:
 ````bash
 bash <(curl -L -s https://raw.githubusercontent.com/d9999pro/GamePing/main/GamePing.sh)
 ````
-
+**Docker
 
 ````docker
 docker run --rm --net=host d9999pro/GamePing
